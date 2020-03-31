@@ -1,0 +1,52 @@
+{
+  "name": "@open-age/discover-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "release:major": "npm version major && git push origin master && npm publish --access public",
+    "release:minor": "npm version minor && git push origin master && npm publish --access public",
+    "release:patch": "npm version patch && git push origin master && npm publish --access public",
+    "publish": "npm publish --access public",
+    "lint": "eslint --fix *.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openage/discover-client.git"
+  },
+  "keywords": [
+    "discover",
+    "client",
+    "openage"
+  ],
+  "peerDependencies": {
+    "@open-age/logger": "^1.3.6",
+    "config": "^1.31.0",
+    "node-rest-client": "^3.1.0",
+    "node-rest-client-promise": "^2.0.0",
+    "build-url": "^2.0.0"
+  },
+  "devDependencies": {
+    "build-url": "^2.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "config": "^1.31.0",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "node-rest-client": "^3.1.0",
+    "node-rest-client-promise": "^2.0.0"
+  },
+  "author": "Sunny Parkash <sunny.parkash@gmail.com> (https://github.com/sunnyparkash)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openage/discover-client/issues"
+  },
+  "homepage": "https://github.com/openage/discover-client#readme"
+}
