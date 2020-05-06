@@ -4,6 +4,9 @@ const client = new (require('node-rest-client-promise')).Client()
 const buildUrl = require('build-url')
 
 const put = async (id, model, options, collection, context) => {
+    if (config.disabled) {
+        return {}
+    }
     options = options || {}
     const args = {
         headers: headerHelper.build(context),
@@ -27,6 +30,9 @@ const put = async (id, model, options, collection, context) => {
 }
 
 const get = async (id, options, collection, context) => {
+    if (config.disabled) {
+        return {}
+    }
     options = options || {}
     const args = {
         headers: headerHelper.build(context)
@@ -49,6 +55,10 @@ const get = async (id, options, collection, context) => {
 }
 
 const search = async (query, options, collection, context) => {
+    if (config.disabled) {
+        return []
+    }
+
     options = options || {}
     // TODO: paging
 
@@ -73,6 +83,10 @@ const search = async (query, options, collection, context) => {
 }
 
 const post = async (model, options, collection, context) => {
+    if (config.disabled) {
+        return {}
+    }
+
     options = options || {}
     const args = {
         headers: headerHelper.build(context),
